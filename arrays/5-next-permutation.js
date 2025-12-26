@@ -12,13 +12,13 @@ class Solution {
         let pivot;
         let piVotIndex;
 
-        for (let i = arr.length - 1, j = arr.length - 2; i > 0 , j >= 0; i--, j--) {
+        for (let i = arr.length - 1; i > 0; i--) {
             const numRight = arr[i];
-            const numLeft = arr[j];
+            const numLeft = arr[i - 1];
 
             if (numRight > numLeft) {
                 pivot = numLeft
-                piVotIndex = j;
+                piVotIndex = i - 1;
                 break
             }
         }
